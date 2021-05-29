@@ -1,0 +1,24 @@
+{
+	"name": "DevContainer ReactApp",
+	
+	// Provide the dev container with a Dockerfile that it can use to build an image and run the container.
+	"dockerFile": "Dockerfile",
+	
+	// Command(s) to run once the container is up and running.
+	// In this case we are installing the Node modules and starting the application server.
+	"postCreateCommand": "yarn install && yarn start",
+		
+	// Forward your application's port(s) running in the container to the local machine.
+	"forwardPorts": [3000],
+		
+	// Required VSC code extensions that you want to automatically install for the developers to use.
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"ms-azuretools.vscode-docker",
+		"eamodio.gitlens"
+	]
+	
+	// Use the devcontainer.json reference to explore all possible configurations.
+	// https://code.visualstudio.com/docs/remote/devcontainerjson-reference
+}
